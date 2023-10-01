@@ -2,6 +2,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 
+// Express-Anwendung wird erstellt
 const app = express()
 
 // Middleware
