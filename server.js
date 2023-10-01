@@ -46,7 +46,7 @@ app.get("/", (req, res) => {
   app.post("/register", async (req, res) => {
     const { username, password } = req.body
     await User.create({ username, password })
-    res.send('<p>Registrierung erfolgreich.</p><a href="/login">Zum Login.</a>')
+    res.send('Registrierung erfolgreich.<a href="/login">Zum Login.</a>')
   })
 
   // Login von "User"
@@ -56,7 +56,7 @@ app.get("/", (req, res) => {
     if (user) {
       res.send("Login erfolgreich.")
     } else {
-      res.send("Falscher Benutzername oder Passwort.")
+      res.send('Falscher Benutzername oder Passwort.<a href="/login">Versuche erneut.</a>')
     }
   })
 
